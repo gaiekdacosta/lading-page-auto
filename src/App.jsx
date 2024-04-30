@@ -1,8 +1,10 @@
-import { Box, Button, Flex, Img, Input, Text, Textarea } from "@chakra-ui/react";
-import codeImage from './assets/background.jpg';
+import { Button, Flex, Img, Input, Text, Textarea } from "@chakra-ui/react";
 import { FaRobot, FaWhatsapp } from "react-icons/fa";
 import { HiOutlineDocumentReport } from "react-icons/hi";
+import codeImage from './assets/61568cc1-edc3-4490-983f-81b2cc1f8160.jpg';
+import graphic from './assets/business-concept-with-graphic-holography (1).jpg'
 import Card from "./components/card";
+import Depoiments from "./components/depoiments";
 
 function App() {
   return (
@@ -25,7 +27,7 @@ function App() {
           </Text>
           <Text 
               w='70%'
-              fontWeight='semibold' 
+              fontWeight='extrabold' 
               fontSize='40px' 
               flexDirection='column'
               lineHeight={1}>
@@ -59,6 +61,8 @@ function App() {
               bg='whitesmoke'
               placeholder="Email" />
             <Textarea 
+              placeholder="Mensagem"
+              resize='none'
               bg='whitesmoke'
             />
             <Button
@@ -92,10 +96,14 @@ function App() {
       </Flex>
       <Flex 
         justifyContent='space-around'
-        mt='5% 0 5% 0'>
+        m='5%'>
         <Img 
-          h='300px'
-          src={'reportImage'} />
+          h='350px'
+          borderRadius='full'
+          border='2px solid'
+          borderColor='#2FCCDB'
+          src={graphic} 
+        />
         <Flex 
           flexDirection='column' 
           w='35%' 
@@ -129,10 +137,33 @@ function App() {
             w='50%'
             _hover={{ 
               bg:'#22def0',
-              transition: 'transform 0.3s ease'
+              transition: 'transform 0.5s ease'
             }}>
             Entrar em contato agora
           </Button>
+        </Flex>
+      </Flex>
+      <Flex
+        alignItems='center'
+        flexDirection='column'
+        m='5% 0 5% 0'>
+        <Text
+          color='#2FCCDB' 
+          letterSpacing={3} 
+          fontWeight='semibold'
+          fontSize='15px'>
+            DEPOIMENTOS
+        </Text>
+        <Text
+          m='0.5% 0 1% 0'
+          fontWeight='extrabold'
+          fontSize='23px'
+          whiteSpace='nowrap'>
+            O que dizem as pessoas que utilizam 
+            <Text ml='1%' color='#2FCCDB' as='span'>automação</Text>?
+        </Text>
+        <Flex>
+          <Depoiments />
         </Flex>
       </Flex>
     </>
