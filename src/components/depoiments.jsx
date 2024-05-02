@@ -1,35 +1,28 @@
 import { Flex, Text } from "@chakra-ui/react";
-import { FaCircleUser } from "react-icons/fa6";
+import { useState } from "react";
 
-const Depoiments = () => {
+const Depoiments = ({ content, position }) => {
+    const [isHovered, setIsHovered] = useState(false);
+    
     return (
-        <Flex
-            border='2px solid'
-            borderColor='#2FCCDB'
-            borderRadius='2xl'
-            p='1%'
-            flexDirection='column'
-            fontSize='12px'
-            w='35%'>
-            <Text>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Dolorem unde consequuntur consequatur accusamus nostrum vitae.
-            </Text>
-            <Flex alignItems='center'>
-                <FaCircleUser style={{ fontSize: '30px' }} />
-                <Flex ml='3%' flexDirection='column'>
-                    <Text
-                        whiteSpace='nowrap'
-                        fontWeight='semibold'
-                        color='#2FCCDB' >
-                        Fulano de tal
-                    </Text>
-                    <Text>
-                        CEO
-                    </Text>
-                </Flex>
-            </Flex>
-        </Flex>
+    <Flex
+        border='2px solid'
+        borderColor='#2FCCDB'
+        cursor='pointer'
+        borderRadius='2xl'
+        p='1%'
+        w='28%'
+        maxW='28%'
+        gap='1'
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+        style={{ 
+            boxShadow: isHovered ? '0px 0px 10px 3px rgba(47, 204, 219, 0.7)' : 'none', 
+            transition: 'box-shadow 0.3s' 
+            }}>
+        <Text fontWeight='bold'>{position}</Text>
+        <Text>{content}</Text>
+    </Flex>
     );
 }
 

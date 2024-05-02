@@ -1,7 +1,9 @@
 import { Flex, Text } from "@chakra-ui/react";
-import { FaRobot } from "react-icons/fa";
+import { useState } from "react";
 
 const Card = ({ icon, content }) => {
+    const [isHovered, setIsHovered] = useState(false);
+
     return (
         <>
             <Flex
@@ -12,7 +14,15 @@ const Card = ({ icon, content }) => {
                 maxW='350px'
                 alignItems='center'
                 flexDirection='column'
-                borderRadius='md'>
+                borderRadius='md'
+                lineHeight={1}
+                cursor='pointer'
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)}
+                style={{ 
+                    boxShadow: isHovered ? '0px 0px 10px 3px rgba(47, 204, 219, 0.7)' : 'none', 
+                    transition: 'box-shadow 0.3s' 
+                }}>
                 <Flex
                     borderRadius='full'
                     border='3px solid'
