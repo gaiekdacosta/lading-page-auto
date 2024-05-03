@@ -21,46 +21,51 @@ const Header = () => {
     });
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <>
       <Flex
-        justifyContent="space-between"
-        alignItems="center"
-        h="55px"
-        bg="#2FCCDB"
-        position="fixed"
-        p="0 1% 0 1%"
-        top="0"
-        left="0"
-        width="100%"
-        zIndex="2"
-        color="black"
-      >
-        <Flex ml="1%" alignItems="center" gap="1">
+        justifyContent='space-between'
+        alignItems='center'
+        h='55px'
+        bg='#2FCCDB'
+        position='fixed'
+        p='0 1% 0 1%'
+        top='0'
+        left='0'
+        width='100%'
+        zIndex='2'
+        color='black'>
+        <Flex ml='1%' alignItems='center' gap='1'>
           <FaCode style={{ fontSize: "20px" }} />
-          <Text fontWeight="semibold">Gaiek Solutions</Text>
+          <Text fontWeight='semibold'>Gaiek Solutions</Text>
         </Flex>
         <Menu>
           <MenuButton
             as={IconButton}
-            aria-label="Options"
+            aria-label='Options'
             icon={<RxHamburgerMenu style={{ fontSize: "25px" }} />}
-            variant="unstyled"
+            variant='unstyled'
           />
-          <MenuList mt="1.5%" bg="black" color="white" borderColor="#2FCCDB">
-            <MenuItem bg="black" onClick={() => navigateSection("BEM-VINDO")}>
+          <MenuList mt='1.5%' bg='black' color='white' borderColor='#2FCCDB'>
+            <MenuItem bg='black' onClick={scrollToTop}>
               Inicio
             </MenuItem>
-            <MenuItem bg="black" onClick={() => navigateSection("SERVIÇOS")}>
+            <MenuItem bg='black' onClick={() => navigateSection("BEM-VINDO")}>
               Serviços
             </MenuItem>
-            <MenuItem bg="black" onClick={() => navigateSection("SOBRE MIM")}>
+            <MenuItem bg='black' onClick={() => navigateSection("SERVIÇOS")}>
               Sobre mim
             </MenuItem>
             <MenuItem
-              bg="black"
-              onClick={() => navigateSection("PASSO A PASSO")}
-            >
+              bg='black'
+              onClick={() => navigateSection("PASSO A PASSO")}>
               Passo a passo
             </MenuItem>
           </MenuList>
