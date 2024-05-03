@@ -17,8 +17,8 @@ const MyImage = () => {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       style={{
-        transition: "transform 0.5s ease",
-        transform: isHovered ? "rotateY(180deg)" : "rotateY(0deg)",
+        boxShadow: isHovered ? '0px 0px 10px 3px rgba(47, 204, 219, 0.7)' : 'none', 
+        transition: 'box-shadow 0.3s' 
       }}
     />
   );
