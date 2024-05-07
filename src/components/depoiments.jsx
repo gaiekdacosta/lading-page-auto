@@ -10,7 +10,7 @@ const Depoiments = ({ content, position, isMobile }) => {
       borderColor='#2FCCDB'
       cursor='pointer'
       borderRadius='2xl'
-      p={isMobile() ? "5%" : "1.5%"}
+      p={isMobile ? "5%" : "1.5%"}
       gap='1'
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}

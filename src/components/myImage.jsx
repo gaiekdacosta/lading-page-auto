@@ -1,13 +1,14 @@
 import { Img } from "@chakra-ui/react";
 import { useState } from "react";
-import me from "/my-photo.jpg";
+import me from "/pc-photo.jpg";
 
 const MyImage = ({ isMobile }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
     <Img
-      h={isMobile() ? "300px" : "350px"}
+      h={isMobile ? "300px" : "400px"}
+      w='400px'
       borderRadius='full'
       src={me}
       border='3px solid'

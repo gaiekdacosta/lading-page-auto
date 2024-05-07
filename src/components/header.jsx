@@ -57,10 +57,10 @@ const Header = () => {
             <MenuItem bg='black' onClick={scrollToTop}>
               Inicio
             </MenuItem>
-            <MenuItem bg='black' onClick={() => navigateSection("BEM-VINDO")}>
+            <MenuItem bg='black' onClick={() => navigateSection("Enviar mensagem")}>
               Serviços
             </MenuItem>
-            <MenuItem bg='black' onClick={() => navigateSection("SERVIÇOS")}>
+            <MenuItem bg='black' onClick={() => navigateSection("Automatização de processos manuais em sistemas")}>
               Sobre mim
             </MenuItem>
             <MenuItem
