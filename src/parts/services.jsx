@@ -10,6 +10,7 @@ const Services = ({ isMobile, colorDefault }) => {
       alignItems="center"
       flexDirection="column"
       m="3% 0 5% 0"
+      p='0 30px 0 30px'
       fontWeight="semibold"
     >
       <Text
@@ -20,7 +21,7 @@ const Services = ({ isMobile, colorDefault }) => {
       >
         SERVIÇOS
       </Text>
-      <Flex mt="1.5%" gap="5" flexDirection={isMobile ? "column" : "row"}>
+      <Flex mt="1.5%"  gap="5" flexDirection={isMobile ? "column" : "row"}>
         <Card
           icon={<HiOutlineDocumentReport />}
           content="Criação e envio de relatórios automatizados"

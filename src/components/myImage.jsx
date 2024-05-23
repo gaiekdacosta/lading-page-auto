@@ -1,6 +1,6 @@
 import { Img } from "@chakra-ui/react";
 import { useState } from "react";
-import me from "/pc-photo.jpg";
+import me from "/pc-photo.webp";
 
 const MyImage = ({ isMobile }) => {
   const [isHovered, setIsHovered] = useState(false);

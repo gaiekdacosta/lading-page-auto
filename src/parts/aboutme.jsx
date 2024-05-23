@@ -3,7 +3,6 @@ import { FaWhatsapp } from "react-icons/fa";
 import MyImage from "../components/myImage";
 
 const AboutMe = ({ isMobile, colorDefault }) => {
-
   const whatsappLink = () => {
     window.open(
       "https://wa.me/5585991752876?text=Ol%C3%A1%2C+estou+em+busca+de+um+automatiza%C3%A7%C3%A3o%21",
@@ -16,6 +15,7 @@ const AboutMe = ({ isMobile, colorDefault }) => {
       justifyContent="space-around"
       alignItems="center"
       m="5%"
+      p='2%'
       flexDirection={isMobile ? "column" : ""}
     >
       <MyImage isMobile={isMobile} />
@@ -29,18 +29,20 @@ const AboutMe = ({ isMobile, colorDefault }) => {
           SOBRE MIM
         </Text>
         <Text fontSize="22px" lineHeight={1.1} fontWeight="semibold">
-          Evite erros e execute atividades rotineiras eficientemente com
-          facilidade, sem interrupções.
+          Evite erros, execute atividades rotineiras de forma eficiente
         </Text>
         <Text>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, quae
-          dolorem. Illo reiciendis minus sit ratione ducimus sunt cum ut
-          consequatur maxime. Aperiam, consectetur laboriosam tenetur
-          praesentium quae nostrum iusto.
+          Olá! Sou Gaiek da costa, um freelancer apaixonado por simplificar
+          processos e otimizar as coisas. Com mais de 3 anos de
+          experiência em desenvolvimento de scripts. 
           <br />
           <br />
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus,
-          facilis cupiditate odio totam vitae autem voluptates sed animi quia.
+          Meu objetivo é oferecer soluções personalizadas de automação que permitam
+          a você trabalhar da melhor forma. 
+          <br />
+          <br />
+          Desde a criação de fluxos de trabalho eficientes até o desenvolvimento de
+          scripts e integrações personalizadas, estou aqui para simplificar sua vida.
         </Text>
         <Button
           bg={colorDefault}

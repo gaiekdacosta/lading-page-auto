@@ -1,6 +1,6 @@
 {
-  "name": "landing-page",
   "homepage": "https://gaiekdacosta.github.io/landing-page-auto",
+  "name": "landing-page",
   "private": true,
   "version": "0.0.0",
   "type": "module",

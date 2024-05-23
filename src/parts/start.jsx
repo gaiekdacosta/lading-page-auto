@@ -1,6 +1,6 @@
 import { Flex, Text } from "@chakra-ui/react";
 import Form from "../components/form";
-import background from "/bg.jpg";
+import background from "/bg.webp";
 
 const Start = ({ isMobile, colorDefault }) => {
 
@@ -35,14 +35,14 @@ const Start = ({ isMobile, colorDefault }) => {
                     flexDirection="column"
                     lineHeight={1}
                 >
-                Aumente a produtividade das suas tarefas com as{" "}
+                Maximize sua produtividade {" "}
                 <span style={{ color: colorDefault }}>
-                    automatizações de atividades repetitivas
+                    automatizando tarefas repetitivas
                 </span>
                 </Text>
                 <Text fontSize={isMobile ? "12.5px" : "18px"} lineHeight={1}>
-                Esqueça atividades repetitivas e relatórios que tiram <br /> o foco
-                do seu negócio
+                Esqueça tarefas diarias e relatórios que tiram <br /> o seu foco
+                do negócio
                 </Text>
             </Flex>
             <Form isMobile={isMobile} />
